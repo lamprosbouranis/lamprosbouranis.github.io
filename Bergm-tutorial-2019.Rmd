@@ -20,7 +20,7 @@ body {
 text-align: justify}
 </style>
 
-[Alberto Caimo](https://acaimo.github.io/) (cre, aut), [Lampros Bouranis](https://lamprosbouranis.github.io) (aut), [Robert Krause](https://www.rug.nl/staff/r.w.krause/) (aut) and [Nial Friel](https://maths.ucd.ie/~nial/) (ctb)\
+Author: [Alberto Caimo](https://acaimo.github.io/) (cre, aut), [Lampros Bouranis](https://lamprosbouranis.github.io) (aut), [Robert Krause](https://www.rug.nl/staff/r.w.krause/) (aut) and [Nial Friel](https://maths.ucd.ie/~nial/) (ctb)\
 More info: [http://acaimo.github.io/Bergm/](http://acaimo.github.io/Bergm/)
 
 
