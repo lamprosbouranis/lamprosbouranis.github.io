@@ -1,0 +1,45 @@
+---
+output: html_document
+---
+
+<link rel="stylesheet" href="styles.css" type="text/css">
+
+## Professional Experience
+**Jan. 2014 -- Jan. 2018** PhD Researcher in Statistics,\
+School of Mathematics and Statistics, *University College Dublin*, Ireland
+
+**Oct. 2012 -- Dec. 2013** Medical Applied Statistician,\
+Cardiovascular Epidemiology Unit, Department of Public Health and Primary Care, *University of Cambridge*, UK
+
+**Jun. 2012 -- Sept. 2012** MSc Researcher,\
+Paterson Institute for Cancer Research, *The Christie NHS Foundation*, Manchester, UK
+
+
+## Education
+**2018**  PhD in Statistics\
+*University College Dublin*, Ireland  
+          
+**2012**  MSc in Statistics\
+*Lancaster University*, UK 
+          
+**2011**  BSc in Statistics \
+*Athens University of Economics and Business*, Greece
+
+## Compulsory national service
+**Mar. 2018 -- Mar. 2019** Airman at Hellenic Air Force (HAF).
+
+## Awards
+**2016** Best poster presentation at CASI 2016: 36th Conference on Applied Statistics in Ireland, Limerick (May 2016).
+
+**2014** Insight Centre for Data Analytics Doctoral training Studentship.
+
+**2010** Awarded with honorary scholarship from The State Scholarships Foundation of Greece for the academic year 2009-2010.
+
+**2009** Awarded with honorary scholarship from The State Scholarships Foundation of Greece for the academic year 2008-2009.
+
+
+## Associations
+* American Statistical Association
+* Irish Statistical Association
+* International Network for Social Network Analysis
+* Royal Statistical Society

@@ -1,0 +1,15 @@
+
+<link rel="stylesheet" href="styles.css" type="text/css">
+
+<img src="unnamed.jpg" style="width:35%; border:5px solid; margin-right: 20px" align="center">
+
+<style>
+body {
+text-align: justify}
+</style>
+
+Welcome to my personal website! 
+
+I am currently an airman at the Hellenic Airforce (HAF). I recently obtained my PhD in Statistics at [University College Dublin](http://www.ucd.ie/) under the supervision of [Prof. Nial Friel](https://maths.ucd.ie/~nial/) and the mentoring of [Dr. Florian Maire](https://maths.ucd.ie/~fmaire/). My research project was funded by the [Insight Centre for Data Analytics](http://www.insight-centre.org/) and the main focus lied on the Bayesian analysis of intractable likelihoods with applications to Gibbs random fields.
+
+My full CV is available [here](Bouranis_CV.pdf).

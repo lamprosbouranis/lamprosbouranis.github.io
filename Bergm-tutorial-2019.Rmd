@@ -1,0 +1,46 @@
+---
+output:
+  html_document:
+    toc: true
+    toc_depth: 2
+    toc_float: true
+    number_sections: true
+---
+
+<link rel="stylesheet" href="styles.css" type="text/css">
+
+
+<p align="center">
+  <img width="250" height="100" src="Bergm_logo2.jpg">
+</p>
+
+
+<style>
+body {
+text-align: justify}
+</style>
+
+[Alberto Caimo](https://acaimo.github.io/) (cre, aut), [Lampros Bouranis](https://sites.google.com/site/bouranisl/) (aut), [Robert Krause](https://www.rug.nl/staff/r.w.krause/) (aut) and [Nial Friel](https://maths.ucd.ie/~nial/) (ctb)\
+More info: [http://acaimo.github.io/Bergm/](http://acaimo.github.io/Bergm/)
+
+
+# Getting started
+Install and load the **statnet** and **Bergm** packages:
+
+```{r, eval=FALSE}
+devtools::install_github("acaimo/Bergm")
+install.packages("statnet", repos = "http://cran.r-project.org")
+library(statnet)
+library(Bergm)
+```
+
+# Network data
+
+
+# Model assessment
+
+
+# Parameter estimation
+
+
+# Model selection

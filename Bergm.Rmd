@@ -1,0 +1,22 @@
+---
+output: html_document
+---
+
+<link rel="stylesheet" href="styles.css" type="text/css">
+
+<style>
+body {
+text-align: justify}
+</style>
+
+## The Bergm package - Bayesian exponential random graph models
+
+
+<p align="center">
+  <img width="300" height="150" src="Bergm_logo.jpg">
+</p>
+
+
+**CRAN**: <https://CRAN.R-project.org/package=Bergm>
+
+The Bergm package for R provides a comprehensive framework for Bayesian parameter estimation and model selection for exponential random graph models using various algorithms. It can also supply graphical Bayesian goodness-of-fit procedures that address the issue of model adequacy. See also Alberto Caimo's [webpage](https://acaimo.github.io).

@@ -1,0 +1,33 @@
+name: "https://lamprosbouranis.github.io"
+output_dir: "."
+navbar:
+  title: "Lampros Bouranis"
+  left:
+    - text: "Home"
+      icon: fa-home
+      href: index.html
+    - text: "Bio"
+      icon: fa-user
+      href: about.html
+    - text: "Research"
+      href: research.html
+    - text: "Software"
+      menu:
+        - text: "Bergm"
+          href: Bergm.html
+        - text: "Bergm tutorial 2019"
+          href: Bergm-tutorial-2019.html
+    - text: "Links"
+      href: links.html
+  right:
+    - icon: fa-envelope fa-lg
+      href: contact.html
+    - icon: fa-linkedin fa-lg
+      href: https://www.linkedin.com/in/lampros-bouranis-40636551/
+    - icon: fa-github fa-lg
+      href: https://github.com/lamprosbouranis
+output:
+  html_document:
+      theme: flatly
+      highlight: textmate
+      css: 'styles.css'

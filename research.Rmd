@@ -1,0 +1,54 @@
+---
+output: html_document
+---
+
+<link rel="stylesheet" href="styles.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
+
+## Research profiles
+
+<i class="ai ai-google-scholar-square ai-1x"></i> 
+My [Google Scholar](https://scholar.google.com/citations?hl=en&user=Qcvw8zoAAAAJ) profile.\
+<i class="ai ai-researchgate-square ai-1x"></i>
+My [ResearchGate](https://www.researchgate.net/profile/Lampros_Bouranis) profile.
+
+**ORCID:** 0000-0002-1291-2192
+
+## Research interests
+
+* Markov chain Monte Carlo methods and applications.
+* Bayesian statistics -- model selection; evidence/marginal likelihood estimation.
+* Intractable likelihoods.
+* Statistical network analysis: Bayesian inference for statistical network models and applications in social network analysis.
+* Composite likelihood inference -- applications to Exponential random graph models.
+* Software implementation.
+
+## Publications in peer-reviewed journals
+
+Bouranis, D., Gasparatos, D., Zechmann, B., **Bouranis, L.** and Chorianopoulou S. (2018). \
+**The effect of granular commercial fertilizers containing elemental sulfur on wheat yield under Mediterranean conditions**,\
+*Plants*, 8(1):2. DOI: 10.3390/plants8010002. [Link](https://www.ncbi.nlm.nih.gov/pubmed/30577492)
+
+**Bouranis, L.**, Friel, N., and Maire, F. (2018).\
+**Model comparison for Gibbs random fields using noisy reversible jump Markov chain Monte Carlo**. \
+*Computational Statistics and Data Analysis*, 128:221-241. DOI: 10.1016/j.csda.2018.07.005. [Link](https://www.sciencedirect.com/science/article/pii/S0167947318301713) | [arXiv](https://arxiv.org/abs/1712.05358)
+ 
+**Bouranis, L.**, Friel, N., and Maire, F. (2018).\
+**Bayesian model selection for exponential random graph models via adjusted pseudolikelihoods**.\
+*Journal of Computational and Graphical Statistics*, 27(3):516-528. DOI: 10.1080/10618600.2018.1448832. [Link](https://www.tandfonline.com/doi/abs/10.1080/10618600.2018.1448832?journalCode=ucgs20) | [arXiv](https://arxiv.org/abs/1706.06344)
+
+**Bouranis, L.**, Friel, N., and Maire, F. (2017).\
+**Efficient Bayesian inference for exponential random graph models by correcting the pseudo-posterior distribution**.\
+*Social Networks*, 50:98-108. DOI: 10.1016/j.socnet.2017.03.013. [Link](https://www.sciencedirect.com/science/article/pii/S0378873315301489) | [arXiv](https://arxiv.org/abs/1510.00934)
+
+Bouranis D., Chorianopoulou S., **Bouranis, L.** (2014).\
+**Modelling the trends of nutrient concentration dynamics in S-deprived young maize plants**.\
+*Journal of Plant Nutrition*, 37(13):2128-2143. DOI: 10.1080/01904167.2014.920372. [Link](https://www.tandfonline.com/doi/abs/10.1080/01904167.2014.920372)
+
+Bouranis D., Chorianopoulou S., **Bouranis, L.** (2014).\
+**A power function based approach for the assessment of the sulfate deprivation impact on nutrient allocation in young maize plants**.\
+*Journal of Plant Nutrition*, 37(5):704-722. DOI: 10.1080/01904167.2013.873455. [Link](https://www.tandfonline.com/doi/abs/10.1080/01904167.2013.873455)
+
+**Bouranis, L.**, Sperrin M., Greystoke A., Dive C., Renehan AG. (2013).\
+**The interaction between prognostic and pharmacodynamic biomarkers**.\
+*Br J Cancer*, 109(7):1782-1785. DOI: 10.1038/bjc.2013.527. [Link](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3790178/)

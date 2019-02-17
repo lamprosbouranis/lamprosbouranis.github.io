@@ -1,0 +1,27 @@
+---
+output: html_document
+---
+
+<link rel="stylesheet" href="styles.css" type="text/css">
+
+## Statistical Societies and groups
+* American Statistical Association (ASA) - [link](https://www.amstat.org)
+* The Royal Statistical Society - [link](https://www.rss.org.uk)
+* Greek Statisticians Worldwide (GrStats) - [link](http://www2.stat-athens.aueb.gr/~grstats/)
+* Greek Statistical Institute - [link](http://www.esi-stat.gr)
+* Insight Centre for data Analytics - [link](https://www.insight-centre.org)
+* International Network for Social Network Analysis - [link](https://www.insna.org)
+
+## Universities
+* University College Dublin - [link](http://www.ucd.ie/mathsciences/)
+* Lancaster University - [link](https://www.lancaster.ac.uk/maths/)
+* Athens University of Economics and Business - [link](https://www.dept.aueb.gr/stat)
+
+## Statistical Blogs
+* R-statistics - [link](https://www.r-statistics.com/)
+* R-bloggers - [link](https://www.r-bloggers.com/)
+* StackExchange (stats) - [link](https://stats.stackexchange.com)
+* LaTeX Community - [link](https://www.latex-community.org)
+* Andrew Gelman - [link](https://andrewgelman.com)
+* Christian Robert - [link](https://xianblog.wordpress.com)
+* Darren Wilkinson - [link](https://darrenjw.wordpress.com)
