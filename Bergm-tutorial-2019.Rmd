@@ -32,9 +32,78 @@ devtools::install_github("acaimo/Bergm")
 install.packages("statnet", repos = "http://cran.r-project.org")
 library(statnet)
 library(Bergm)
+library(matrixcalc)
 ```
 
 # Network data
+
+We shall load and plot two datasets: (i) the Lazega's network undirected graph among the 71 attorneys (partners and associates) of the SG\&R corporate law firm; (ii) the Faux Dixon High School network directed graph of 248 students.
+
+## Lazega's law firm
+```{r echo=TRUE, fig.align='center', out.width='25%'}
+load(url("https://github.com/lamprosbouranis/lamprosbouranis.github.io/Law_Firm_Lawyers_Coworker.Rdata"))
+
+par(mfrow=c(1,3),mar=c(4,0,0,0), oma=c(0,6,5,3)) 
+
+# Graph 1:
+CC <- c("red","green")
+
+set.seed(20)
+plot(lf,
+     vertex.col= CC[lf %v% 'status'],
+     edge.col  = colors()[c(229)],
+     vertex.cex= 1.5
+)
+
+legend("topright",
+       inset = 0.05,
+       legend= c("Partner","Associate"),
+       col   = CC,
+       yjust = 0,
+       pch   = 19,
+       xpd   = TRUE,
+       cex   = 1.2, 
+       title ="STATUS")
+
+# Graph 2:
+CC <- c("blue","gold","brown")
+
+set.seed(20)
+plot(lf,
+     vertex.col = CC[lf %v% 'office'],
+     edge.col   = colors()[c(229)],
+     vertex.cex = 1.5)
+legend("topright",
+       inset = 0.05,
+       legend= c("Boston","Hartford","Providence"),
+       col   = CC,
+       yjust = 0,
+       pch   = 19,
+       xpd   = TRUE,
+       cex   = 1.2,
+       title="OFFICE")
+
+# Graph 3:
+CC <- c("darkorchid1","cyan","hotpink")
+
+set.seed(20)
+plot(lf,
+     vertex.col = CC,
+     edge.col   = colors()[c(229)],
+     vertex.cex = 1.5)
+legend("topright",
+       inset  = 0.05,
+       legend = c("Harvard, Yale","UCON","Other"),
+       col    = CC,
+       yjust  = 0,
+       pch    = 19,
+       xpd    = TRUE,
+       cex    = 1.2,
+       title  = "LAW SCHOOL")
+
+```
+
+## Lazega's law firm
 
 
 # Model assessment
