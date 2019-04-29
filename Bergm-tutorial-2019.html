@@ -469,65 +469,74 @@ library(matrixcalc)</code></pre>
 <div id="network-data" class="section level1">
 <h1><span class="header-section-number">2</span> Network data</h1>
 <p>We shall load and plot two datasets: (i) the Lazega’s network undirected graph among the 71 attorneys (partners and associates) of the SG&amp;R corporate law firm; (ii) the Faux Dixon High School network directed graph of 248 students.</p>
-<pre class="r"><code>load(url(&quot;https://github.com/lamprosbouranis/lamprosbouranis.github.io/Law_Firm_Lawyers_Coworker.Rdata&quot;))
+<div id="lazegas-law-firm" class="section level2">
+<h2><span class="header-section-number">2.1</span> Lazega’s law firm</h2>
+</div>
+<div id="faux-dixon-high-school" class="section level2">
+<h2><span class="header-section-number">2.2</span> Faux Dixon High School</h2>
+<pre class="r"><code>data(faux.dixon.high)
 
-par(mfrow=c(1,3),mar=c(4,0,0,0), oma=c(0,6,5,3)) 
+dixon &lt;- faux.dixon.high
+dixon %v% &#39;race&#39; &lt;- as.numeric(factor(dixon %v% &#39;race&#39;))
+
+par(mfrow=c(1,3),mar=c(4,0,0,0), oma=c(0,6,5,3))
 
 # Graph 1:
-CC &lt;- c(&quot;red&quot;,&quot;green&quot;)
+CC &lt;- c(&quot;black&quot;,&quot;red&quot;)
 
 set.seed(20)
-plot(lf,
-     vertex.col= CC[lf %v% &#39;status&#39;],
+plot(dixon,
+     vertex.col= &#39;sex&#39;,
      edge.col  = colors()[c(229)],
      vertex.cex= 1.5
 )
 
 legend(&quot;topright&quot;,
        inset = 0.05,
-       legend= c(&quot;Partner&quot;,&quot;Associate&quot;),
        col   = CC,
-       yjust = 0,
+       legend= c(&quot;Male&quot;,&quot;Female&quot;),
        pch   = 19,
-       xpd   = TRUE,
-       cex   = 1.2, 
-       title =&quot;STATUS&quot;)
+       xpd   = TRUE, 
+       cex   = 1.2,
+       title =&quot;GENDER&quot;)
 
 # Graph 2:
-CC &lt;- c(&quot;blue&quot;,&quot;gold&quot;,&quot;brown&quot;)
+CC &lt;- c(&quot;blue&quot;,&quot;gold&quot;,&quot;brown&quot;,&quot;hotpink&quot;)
 
 set.seed(20)
-plot(lf,
-     vertex.col = CC[lf %v% &#39;office&#39;],
+plot(dixon,
+     vertex.col = CC[dixon %v% &#39;race&#39;],
      edge.col   = colors()[c(229)],
      vertex.cex = 1.5)
 legend(&quot;topright&quot;,
        inset = 0.05,
-       legend= c(&quot;Boston&quot;,&quot;Hartford&quot;,&quot;Providence&quot;),
+       legend= c(&quot;Black&quot;,&quot;Hispanic&quot;,&quot;Other&quot;,&quot;White&quot;),
        col   = CC,
        yjust = 0,
        pch   = 19,
        xpd   = TRUE,
        cex   = 1.2,
-       title=&quot;OFFICE&quot;)
+       title = &quot;RACE&quot;)
 
 # Graph 3:
-CC &lt;- c(&quot;darkorchid1&quot;,&quot;cyan&quot;,&quot;hotpink&quot;)
+CC &lt;- c(&quot;darkorchid1&quot;,&quot;cyan&quot;,&quot;green&quot;,&quot;yellow&quot;,&quot;darkslateblue&quot;,&quot;ivory4&quot;)
 
 set.seed(20)
-plot(lf,
+plot(dixon,
      vertex.col = CC,
      edge.col   = colors()[c(229)],
      vertex.cex = 1.5)
 legend(&quot;topright&quot;,
        inset  = 0.05,
-       legend = c(&quot;Harvard, Yale&quot;,&quot;UCON&quot;,&quot;Other&quot;),
+       legend = paste(&#39;Grade&#39;,7:12),
        col    = CC,
        yjust  = 0,
        pch    = 19,
        xpd    = TRUE,
        cex    = 1.2,
-       title  = &quot;LAW SCHOOL&quot;)</code></pre>
+       title  = &quot;GRADE&quot;)</code></pre>
+<p><img src="Bergm-tutorial-2019_files/figure-html/unnamed-chunk-2-1.png" width="672" style="display: block; margin: auto;" /></p>
+</div>
 </div>
 <div id="model-assessment" class="section level1">
 <h1><span class="header-section-number">3</span> Model assessment</h1>

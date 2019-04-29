@@ -27,7 +27,7 @@ More info: [http://acaimo.github.io/Bergm/](http://acaimo.github.io/Bergm/)
 # Getting started
 Install and load the **statnet** and **Bergm** packages:
 
-```{r, eval=FALSE}
+```{r eval=TRUE, results='hide', message=FALSE, warning=FALSE}
 devtools::install_github("acaimo/Bergm")
 install.packages("statnet", repos = "http://cran.r-project.org")
 library(statnet)
@@ -40,76 +40,143 @@ library(matrixcalc)
 We shall load and plot two datasets: (i) the Lazega's network undirected graph among the 71 attorneys (partners and associates) of the SG\&R corporate law firm; (ii) the Faux Dixon High School network directed graph of 248 students.
 
 ## Lazega's law firm
-```{r echo=TRUE, fig.align='center', out.width='25%'}
-load(url("https://github.com/lamprosbouranis/lamprosbouranis.github.io/Law_Firm_Lawyers_Coworker.Rdata"))
 
-par(mfrow=c(1,3),mar=c(4,0,0,0), oma=c(0,6,5,3)) 
+
+## Faux Dixon High School
+```{r, echo=TRUE, fig.align='center'}
+library(devtools)
+library(roxygen2)
+url <- "https://github.com/lamprosbouranis/lamprosbouranis.github.io/blob/master/Law_Firm_Lawyers_Coworker.RData"
+
+source_url(url)
+
+
+data(faux.dixon.high)
+
+dixon <- faux.dixon.high
+dixon %v% 'race' <- as.numeric(factor(dixon %v% 'race'))
+
+par(mfrow=c(1,3),mar=c(4,0,0,0), oma=c(0,6,5,3))
 
 # Graph 1:
-CC <- c("red","green")
+CC <- c("black","red")
 
 set.seed(20)
-plot(lf,
-     vertex.col= CC[lf %v% 'status'],
+plot(dixon,
+     vertex.col= 'sex',
      edge.col  = colors()[c(229)],
      vertex.cex= 1.5
 )
 
 legend("topright",
        inset = 0.05,
-       legend= c("Partner","Associate"),
        col   = CC,
-       yjust = 0,
+       legend= c("Male","Female"),
        pch   = 19,
-       xpd   = TRUE,
-       cex   = 1.2, 
-       title ="STATUS")
+       xpd   = TRUE, 
+       cex   = 1.2,
+       title ="GENDER")
 
 # Graph 2:
-CC <- c("blue","gold","brown")
+CC <- c("blue","gold","brown","hotpink")
 
 set.seed(20)
-plot(lf,
-     vertex.col = CC[lf %v% 'office'],
+plot(dixon,
+     vertex.col = CC[dixon %v% 'race'],
      edge.col   = colors()[c(229)],
      vertex.cex = 1.5)
 legend("topright",
        inset = 0.05,
-       legend= c("Boston","Hartford","Providence"),
+       legend= c("Black","Hispanic","Other","White"),
        col   = CC,
        yjust = 0,
        pch   = 19,
        xpd   = TRUE,
        cex   = 1.2,
-       title="OFFICE")
+       title = "RACE")
 
 # Graph 3:
-CC <- c("darkorchid1","cyan","hotpink")
+CC <- c("darkorchid1","cyan","green","yellow","darkslateblue","ivory4")
 
 set.seed(20)
-plot(lf,
+plot(dixon,
      vertex.col = CC,
      edge.col   = colors()[c(229)],
      vertex.cex = 1.5)
 legend("topright",
        inset  = 0.05,
-       legend = c("Harvard, Yale","UCON","Other"),
+       legend = paste('Grade',7:12),
        col    = CC,
        yjust  = 0,
        pch    = 19,
        xpd    = TRUE,
        cex    = 1.2,
-       title  = "LAW SCHOOL")
+       title  = "GRADE")
 
 ```
 
-## Lazega's law firm
+# Parameter estimation
+```{r eval=TRUE, echo=TRUE}
 
+# Set a seed for reproducibility:
+set.seed(20)
+
+# Model specification:
+model <- lf ~ edges +                 # density
+              gwesp(0.8, fixed=TRUE) +# transitivity
+              nodematch("office")  +  # office-based homophily
+              nodematch("practice")   # practice-based homophily
+
+# Observed network statistics:
+summary(model)
+
+# Specify a prior distribution: 
+prior.mean  <- c(-4, 1, 1, 1)
+prior.sigma <- diag(3, 4)  
+```
+
+Estimate the parameter posterior distribution using the (asymptotically exact) approximate exchange algorithm:
+
+```{r eval=FALE, results='hide', message=FALSE, warning=FALSE}
+p.laz <- bergm(model,
+               prior.mean  = prior.mean,
+               prior.sigma = prior.sigma,
+               aux.iters   = 500,
+               burn.in     = 500,
+               main.iters  = 3500,
+               nchains     = 8,
+               gamma       = 0.5)
+```
+
+
+```{r eval=FALSE, results='hide', message=FALSE, warning=FALSE}
+# Posterior summaries:
+summary(p.laz)
+```
+
+```{r eval=FALSE}
+Posterior Density Estimate for Model: y ~ edges + gwesp(0.8, fixed = TRUE) + nodematch("office") + nodematch("practice") 
+ 
+                                  Mean        SD     Naive SE Time-series SE
+theta1 (edges)              -4.9488073 0.3748118 0.0022399287    0.014825953
+theta2 (gwesp.fixed.0.8)     0.7205465 0.1264907 0.0007559268    0.004742306
+theta3 (nodematch.office)    1.1372083 0.2529560 0.0015117014    0.009813626
+theta4 (nodematch.practice)  1.2071022 0.2401867 0.0014353900    0.009324634
+
+                                  2.5%        25%       50%        75%      97.5%
+theta1 (edges)              -5.7491891 -5.1933144 -4.927531 -4.6906613 -4.2680036
+theta2 (gwesp.fixed.0.8)     0.4930813  0.6279901  0.713765  0.8030426  0.9875439
+theta3 (nodematch.office)    0.6535886  0.9644967  1.130713  1.2985939  1.6537166
+theta4 (nodematch.practice)  0.7469651  1.0386130  1.209929  1.3703723  1.6787020
+
+Acceptance rate: 0.24 
+```
+
+```{r eval=FALSE}
+# MCMC diagnostics plots:
+
+```
 
 # Model assessment
-
-
-# Parameter estimation
-
 
 # Model selection

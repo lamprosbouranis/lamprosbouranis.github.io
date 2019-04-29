@@ -12,11 +12,7 @@ navbar:
     - text: "Research"
       href: research.html
     - text: "Software"
-      menu:
-        - text: "Bergm"
-          href: Bergm.html
-        - text: "Bergm tutorial 2019"
-          href: Bergm-tutorial-2019.html
+      href: Bergm.html
     - text: "Links"
       href: links.html
   right:
