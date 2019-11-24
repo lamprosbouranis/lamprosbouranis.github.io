@@ -23,7 +23,7 @@ text-align: justify}
 
 
 <p align="center">
-  <img width="300" height="150" src="Bergm_logo.jpg">
+  <img width="300" height="150" src="hex_Bergm_medium.png>
 </p>
 
 
