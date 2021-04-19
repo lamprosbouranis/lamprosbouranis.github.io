@@ -21,9 +21,15 @@ My [ResearchGate](https://www.researchgate.net/profile/Lampros_Bouranis) profile
 * Intractable likelihoods.
 * Statistical network analysis: Bayesian inference for statistical network models and applications in social network analysis.
 * Composite likelihood inference -- applications to Exponential random graph models.
+* Stochastic epidemiology.
 * Software implementation.
 
 ## Publications in peer-reviewed journals
+
+Caimo, A. , **Bouranis, L.**, Krause, R. and Friel, N. (2021). \
+**Statistical Network Analysis with Bergm**. \
+*Journal of Statistical Software*, Accepted. \ 
+[arXiv](https://arxiv.org/abs/2104.02444)
 
 Bouranis, D., Gasparatos, D., Zechmann, B., **Bouranis, L.** and Chorianopoulou S. (2018). \
 **The effect of granular commercial fertilizers containing elemental sulfur on wheat yield under Mediterranean conditions**,\
