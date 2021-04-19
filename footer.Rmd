@@ -4,5 +4,4 @@ output: html_document
 
 <link rel="stylesheet" href="styles.css" type="text/css">
 
-$\circledC$ 2019 Lampros Bouranis\ 
-Created via [blogdown](https://bookdown.org/yihui/blogdown/) · Based on the Academic theme for [Hugo](https://gohugo.io/). 
+2021 Lampros Bouranis. All rights reserved.
