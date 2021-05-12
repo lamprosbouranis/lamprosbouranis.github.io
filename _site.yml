@@ -18,9 +18,9 @@ navbar:
   right:
     - icon: fa-envelope fa-lg
       href: contact.html
-    - icon: fab-linkedin fa-lg
+    - icon: fa-linkedin fa-lg
       href: https://www.linkedin.com/in/lampros-bouranis-40636551/
-    - icon: fab-github fa-lg
+    - icon: fa-github fa-lg
       href: https://github.com/lamprosbouranis
 output:
   html_document:
