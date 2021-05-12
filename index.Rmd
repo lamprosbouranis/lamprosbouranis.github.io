@@ -9,7 +9,7 @@ text-align: justify
 }
 </style>
 
-Welcome to my personal website! 
+Welcome to my personal website.! 
 
 I am currently a Marie Sklodowska-Curie Research Fellow at the [Department of Statistics](https://www.dept.aueb.gr/en/stat), Athens University of Economics and Business. My research focuses on Bayesian inference and model selection for stochastic epidemics under the supervision of [Prof. Nikos Demiris](http://www2.aueb.gr/users/nikos/) and [Prof. Ioannis Ntzoufras](https://www.aueb.gr/en/faculty_page/ntzoufras-ioannis/).
 
