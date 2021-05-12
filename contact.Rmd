@@ -15,4 +15,4 @@ output: html_document
   gtag('config', 'UA-51103728-2');
 </script>
 
-**Email:** lampros.bouranis@gmail.com; lampros.bouranis@ucdconnect.ie
+**Email:** bouranis@aueb.gr; lampros.bouranis@ucdconnect.ie
