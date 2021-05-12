@@ -22,7 +22,7 @@ text-align: justify}
 ## The Bergm package - Bayesian exponential random graph models
 
 <p align="center">
-<img width="180" height="90" src="hex_Bergm_medium.png";>
+<img width="300" height="200" src="hex_Bergm_medium.png";>
 </p>
 
 
