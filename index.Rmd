@@ -22,6 +22,9 @@ My full CV is available [here](Bouranis_CV.pdf) [last update: 11/05/2021].
 
 ### News and upcoming events
 
+#### 2021 -- May
+* The [website](https://bernadette-eu.github.io/) for the BERNADETTE Marie Sklodowska-Curie Action (MSCA) is live. Feel free to bookmark this to keep an eye on the project updates. The website is accompanied by a Twitter profile: [BernadetteMsca](https://twitter.com/BernadetteMsca).
+
 #### 2021 -- April
 * I will be joining the Department of Statistics at Athens University of Economics and Business as a **Marie Sklodowska-Curie Fellow**. Looking forward to it!
 * **New preprint!** -- Caimo, A., **Bouranis, L.**, Krause, R. and Friel, N. (2021).
