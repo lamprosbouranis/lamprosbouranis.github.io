@@ -18,9 +18,12 @@ I am currently a Marie Sklodowska-Curie Research Fellow at the [Department of St
 
 I obtained my PhD in Statistics at [University College Dublin](http://www.ucd.ie/) under the supervision of [Prof. Nial Friel](https://maths.ucd.ie/~nial/) and the mentoring of [Dr. Florian Maire](https://maths.ucd.ie/~fmaire/). My research project was funded by the [Insight Centre for Data Analytics](http://www.insight-centre.org/) and the main focus lied on the Bayesian analysis of intractable likelihoods with applications to Gibbs random fields.
 
-My full CV is available [here](Bouranis_CV.pdf) [last update: 11/05/2021].
+My full CV is available [here](Bouranis_CV.pdf) [last update: 23/07/2021].
 
 ### News and upcoming events
+
+#### 2021 -- July
+* Version 5.0.3 of the Bergm R library is available on [CRAN](https://cran.r-project.org/web/packages/Bergm/index.html). 
 
 #### 2021 -- May
 * The [website](https://bernadette-eu.github.io/) for the BERNADETTE Marie Sklodowska-Curie Action (MSCA) is live. Feel free to bookmark this to keep an eye on the project updates. The website is accompanied by a Twitter profile: [BernadetteMsca](https://twitter.com/BernadetteMsca).
