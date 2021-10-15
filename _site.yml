@@ -28,7 +28,7 @@ output:
       highlight: textmate
       css: 'styles.css'
 params: 
-    set_title: "My Title!"
+    set_title: "Lampros Bouranis"
 title: "`r params$set_title`"
       
       
