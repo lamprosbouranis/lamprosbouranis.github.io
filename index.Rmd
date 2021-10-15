@@ -25,7 +25,7 @@ My full CV is available [here](Bouranis_CV.pdf) [last update: 15/10/2021].
 #### 2021
 
 ##### October
-* **Talk** - The abstract and pdf of the presentation is available [here](https://www.dept.aueb.gr/en/stat/events/seminar-statistical-network-analysis-bergm). The presentation is also available on [YouTube](https://www.youtube.com/c/AUEBStats).
+* **Talk** - The abstract and pdf of the presentation is available [here](https://www.dept.aueb.gr/en/stat/events/seminar-statistical-network-analysis-bergm). The presentation is also available on the [AUEB-Stats YouTube channel](https://www.youtube.com/c/AUEBStats).
 
 ##### July
 * Version 5.0.3 of the Bergm R library is available on [CRAN](https://cran.r-project.org/web/packages/Bergm/index.html). 
