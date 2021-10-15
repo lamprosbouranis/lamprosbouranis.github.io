@@ -63,6 +63,10 @@ PLOS ONE
 
 Journal of Computational and Graphical Statistics
 
+IEEE Transactions on Network Science and Engineering
+
+International Conference on Artificial Intelligence and Statistics (AISTATS)
+
 ## Associations
 American Statistical Association
 
