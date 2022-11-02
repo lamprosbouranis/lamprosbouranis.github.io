@@ -26,9 +26,10 @@ My [ResearchGate](https://www.researchgate.net/profile/Lampros_Bouranis) profile
 
 ## Publications in peer-reviewed journals
 
-Caimo, A. , **Bouranis, L.**, Krause, R. and Friel, N. (2021). \
+Caimo, A. , **Bouranis, L.**, Krause, R. and Friel, N. (2022). \
 **Statistical Network Analysis with Bergm**. \
-*Journal of Statistical Software*, Accepted. \ 
+*Journal of Statistical Software*, 104(1):1-23. DOI: 10.18637/jss.v104.i01
+[Link](https://www.jstatsoft.org/article/view/v104i01) |
 [arXiv](https://arxiv.org/abs/2104.02444)
 
 Bouranis, D., Gasparatos, D., Zechmann, B., **Bouranis, L.** and Chorianopoulou S. (2018). \
