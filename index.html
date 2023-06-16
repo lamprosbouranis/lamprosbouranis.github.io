@@ -13,8 +13,8 @@
 
 <title>index.knit</title>
 
-<script src="site_libs/header-attrs-2.9/header-attrs.js"></script>
-<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<script src="site_libs/header-attrs-2.21/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
@@ -32,8 +32,8 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
-<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.4.0/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.4.0/css/v4-shims.min.css" rel="stylesheet" />
 
 <style type="text/css">
   code{white-space: pre-wrap;}
@@ -54,6 +54,7 @@ if (window.hljs) {
   }
 }
 </script>
+
 
 
 
@@ -83,6 +84,9 @@ button.code-folding-btn:focus {
 }
 summary {
   display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
 }
 pre code {
   padding: 0;
@@ -140,11 +144,15 @@ $(document).ready(function () {
     href = "index.html";
   var menuAnchor = $('a[href="' + href + '"]');
 
-  // mark it active
-  menuAnchor.tab('show');
-
-  // if it's got a parent navbar menu mark it active as well
-  menuAnchor.closest('li.dropdown').addClass('active');
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
 
   // Navbar adjustments
   var navHeight = $(".navbar").first().height() + 15;
@@ -173,8 +181,8 @@ $(document).ready(function () {
   border-radius: 4px;
 }
 
-.tabset-dropdown > .nav-tabs > li.active:before {
-  content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
   font-family: 'Glyphicons Halflings';
   display: inline-block;
   padding: 10px;
@@ -182,16 +190,9 @@ $(document).ready(function () {
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "&#xe258;";
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "";
+  content: "\e258";
   font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
+  border: none;
 }
 
 .tabset-dropdown > .nav-tabs > li.active {
@@ -235,7 +236,7 @@ $(document).ready(function () {
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -308,36 +309,185 @@ text-align: justify
 }
 </style>
 <p>Welcome to my personal website!</p>
-<p>I am currently a Marie Sklodowska-Curie Research Fellow at the <a href="https://www.dept.aueb.gr/en/stat">Department of Statistics</a>, Athens University of Economics and Business. My research focuses on Bayesian inference and model selection for stochastic epidemics under the supervision of <a href="http://www2.aueb.gr/users/nikos/">Prof. Nikos Demiris</a> and <a href="https://www.aueb.gr/en/faculty_page/ntzoufras-ioannis/">Prof. Ioannis Ntzoufras</a>.</p>
-<p>I obtained my PhD in Statistics at <a href="http://www.ucd.ie/">University College Dublin</a> under the supervision of <a href="https://maths.ucd.ie/~nial/">Prof. Nial Friel</a> and the mentoring of <a href="https://maths.ucd.ie/~fmaire/">Dr. Florian Maire</a>. My research project was funded by the <a href="http://www.insight-centre.org/">Insight Centre for Data Analytics</a> and the main focus lied on the Bayesian analysis of intractable likelihoods with applications to Gibbs random fields.</p>
-<p>My full CV is available <a href="Bouranis_CV.pdf">here</a> [last update: 15/10/2021].</p>
+<p>I am currently a Marie Sklodowska-Curie Research Fellow at the <a
+href="https://www.dept.aueb.gr/en/stat">Department of Statistics</a>,
+Athens University of Economics and Business. My research focuses on
+Bayesian inference and model selection for stochastic epidemics under
+the supervision of <a
+href="http://www2.aueb.gr/users/nikos/">Prof. Nikos Demiris</a> and <a
+href="https://www.aueb.gr/en/faculty_page/ntzoufras-ioannis/">Prof. Ioannis
+Ntzoufras</a>.</p>
+<p>I obtained my PhD in Statistics at <a
+href="http://www.ucd.ie/">University College Dublin</a> under the
+supervision of <a href="https://maths.ucd.ie/~nial/">Prof. Nial
+Friel</a> and the mentoring of <a
+href="https://maths.ucd.ie/~fmaire/">Dr. Florian Maire</a>. My research
+project was funded by the <a
+href="http://www.insight-centre.org/">Insight Centre for Data
+Analytics</a> and the main focus lied on the Bayesian analysis of
+intractable likelihoods with applications to Gibbs random fields.</p>
+<p>My full CV is available <a href="Bouranis_CV.pdf">here</a> [last
+update: 16/6/2023].</p>
 <div id="news-and-upcoming-events" class="section level3">
 <h3>News and upcoming events</h3>
 <div id="section" class="section level4">
-<h4>2021</h4>
-<div id="october" class="section level5">
-<h5>October</h5>
-<ul>
-<li><strong>Talk</strong> - The abstract and pdf of the presentation is available <a href="https://www.dept.aueb.gr/en/stat/events/seminar-statistical-network-analysis-bergm">here</a>. The presentation is also available on the <a href="https://www.youtube.com/c/AUEBStats">AUEB-Stats YouTube channel</a>.</li>
-</ul>
-</div>
+<h4>2023</h4>
 <div id="july" class="section level5">
 <h5>July</h5>
 <ul>
-<li>Version 5.0.3 of the Bergm R library is available on <a href="https://cran.r-project.org/web/packages/Bergm/index.html">CRAN</a>.</li>
+<li>I will be presenting my work on <em>Bayesian learning of
+transmission dynamics using exchangeable Gaussian processes</em> at the
+Greek Stochastics <span class="math inline">\(\nu\)</span>’ Meeting at
+Naxos, Greece [7-10 July].</li>
+</ul>
+</div>
+<div id="june" class="section level5">
+<h5>June</h5>
+<ul>
+<li><p><strong>New preprint!</strong> – <strong>Bouranis, L.</strong>
+(2023). Bernadette: Bayesian Inference and Model Selection for
+Stochastic Epidemics in R <a
+href="https://github.com/openjournals/joss-reviews/issues/5541">JOSS
+preprint</a></p></li>
+<li><p><strong>Software announcement</strong> The Bernadette (“Bayesian
+inference and model selection for stochastic epidemics”) R package
+v1.1.4 is now available on the Comprehensive R Archive Network (CRAN),
+see the package <a
+href="https://CRAN.R-project.org/package=Bernadette">webpage</a>.
+Bernadette provides a framework for Bayesian analysis of infectious
+disease transmission dynamics via diffusion driven multi-type epidemic
+models with time-varying epidemiological parameters, with a particular
+focus on Coronavirus Disease 2019 (COVID-19). It uses the Stan
+probabilistic programming language and implements the Bayesian epidemic
+model described in <a href="https://arxiv.org/abs/2211.15229">Bouranis
+et al</a>. For models fit using Markov chain Monte Carlo, it allows for
+computation of approximate leave-one-out cross-validation (LOO, LOOIC)
+or the Widely Applicable Information Criterion (WAIC) for model checking
+and comparison.</p></li>
+<li><p>I presented my work at the MRC Biostatistics Unit, University of
+Cambridge seminar. The talk is available at the MRC BSU <a
+href="https://www.youtube.com/@MRC_BSU/videos">YouTube
+channel</a>.</p></li>
+<li><p>I presented my work at the HERMES Ph.D. Workshop 2023: “Data
+Science in Business”, which took place in Athens, Greece, at the
+premises of the Department of Statistics, AUEB.</p></li>
 </ul>
 </div>
 <div id="may" class="section level5">
 <h5>May</h5>
 <ul>
-<li>The <a href="https://bernadette-eu.github.io/">website</a> for the BERNADETTE Marie Sklodowska-Curie Action (MSCA) is live. Feel free to bookmark this to keep an eye on the project updates. The website is accompanied by a Twitter profile: <a href="https://twitter.com/BernadetteMsca">BernadetteMsca</a>.</li>
+<li><p><strong>Workshop!</strong> – <a
+href="http://www2.aueb.gr/users/nikos/">Nikolaos Demiris</a> and myself
+organized the workshop <em>Statistical modeling of epidemic
+outbreaks</em> with a fantastic series of talks. A big thank you to our
+guests who honoured us with their presence! For more information you can
+visit the <a href="https://bernadette-eu.github.io/workshop">workshop
+webpage</a>.</p></li>
+<li><p>Together with Prof Ioannis Ntzoufras we visited the 1st Senior
+High School of Markopoulo, participating in the Action “Visits of
+faculty members to secondary education schools” of the program “Outreach
+and information program for the school community”, where we presented
+and discussed the merits of studying at the Department of Statistics at
+AUEB and career opportunities.</p></li>
+</ul>
+</div>
+<div id="february" class="section level5">
+<h5>February</h5>
+<p>I participated in the Action “Visits of faculty members to secondary
+education schools” of the program “Outreach and information program for
+the school community”, organised by the Department of Statistics, Athens
+University of Economics and Business (AUEB). Students of the senior high
+school “Nea Pedia” visited the Computational and Bayesian Statistics
+Laboratory (Troias Building) at the premises of AUEB. Together with Prof
+Ioannis Ntzoufras, and PhD candidate Ilias Leriou we discussed our
+experiences as statisticians, the benefits of studying Science. I also
+presented how the Marie Curie action’s work relates to our everyday
+lives.</p>
+</div>
+</div>
+<div id="section-1" class="section level4">
+<h4>2022</h4>
+<div id="november" class="section level5">
+<h5>November</h5>
+<ul>
+<li><strong>New preprint!</strong> – <strong>Bouranis, L.</strong>,
+Demiris, N., Kalogeropoulos, K. and Ntzoufras, I. (2022).<br />
+<strong>Bayesian analysis of diffusion-driven multi-type epidemic models
+with application to COVID-19</strong>.<br />
+<a href="https://arxiv.org/abs/2211.15229">arXiv</a></li>
+</ul>
+</div>
+<div id="october" class="section level5">
+<h5>October</h5>
+<p>This summer I presented my work on “Bayesian analysis of diffusion
+driven multi-type epidemic models with application to COVID-19” (joint
+with Nikos Demiris, Konstantinos Kalogeropoulos and Ioannis Ntzoufras)
+at the following conferences/meetings:</p>
+<ul>
+<li>Royal Statistical Society International Conference, Aberdeen, UK
+(September 2022).</li>
+<li>Greek Stochastics <span class="math inline">\(\mu\)</span>’ Meeting
+at Corfu, Greece (August 2022).</li>
+<li>AUEB-NKUA-Indiana Conference in Biostatistics &amp; Health
+Analytics, Aegina, Greece (July 2022).</li>
+<li>3rd research meeting of the School of Information Sciences and
+Technology, Athens University of Economics and Business, Greece (June
+2022).</li>
+</ul>
+</div>
+<div id="september" class="section level5">
+<h5>September</h5>
+<ul>
+<li><strong>New publication!</strong> – Caimo, A. , <strong>Bouranis,
+L.</strong>, Krause, R. and Friel, N. (2022).<br />
+Statistical Network Analysis with Bergm.<br />
+<em>Journal of Statistical Software</em>, 104(1):1-23. DOI:
+10.18637/jss.v104.i01 <a
+href="https://www.jstatsoft.org/article/view/v104i01">Link</a> | <a
+href="https://arxiv.org/abs/2104.02444">arXiv</a></li>
+</ul>
+</div>
+</div>
+<div id="section-2" class="section level4">
+<h4>2021</h4>
+<div id="october-1" class="section level5">
+<h5>October</h5>
+<ul>
+<li><strong>Talk</strong> - The abstract and pdf of the presentation is
+available <a
+href="https://www.dept.aueb.gr/en/stat/events/seminar-statistical-network-analysis-bergm">here</a>.
+The presentation is also available on the <a
+href="https://www.youtube.com/c/AUEBStats">AUEB-Stats YouTube
+channel</a>.</li>
+</ul>
+</div>
+<div id="july-1" class="section level5">
+<h5>July</h5>
+<ul>
+<li>Version 5.0.3 of the Bergm R library is available on <a
+href="https://cran.r-project.org/web/packages/Bergm/index.html">CRAN</a>.</li>
+</ul>
+</div>
+<div id="may-1" class="section level5">
+<h5>May</h5>
+<ul>
+<li>The <a href="https://bernadette-eu.github.io/">website</a> for the
+BERNADETTE Marie Sklodowska-Curie Action (MSCA) is live. Feel free to
+bookmark this to keep an eye on the project updates. The website is
+accompanied by a Twitter profile: <a
+href="https://twitter.com/BernadetteMsca">BernadetteMsca</a>.</li>
 </ul>
 </div>
 <div id="april" class="section level5">
 <h5>April</h5>
 <ul>
-<li>I will be joining the Department of Statistics at Athens University of Economics and Business as a <strong>Marie Sklodowska-Curie Fellow</strong>. Looking forward to it!</li>
-<li><strong>New preprint!</strong> – Caimo, A., <strong>Bouranis, L.</strong>, Krause, R. and Friel, N. (2021). Statistical Network Analysis with Bergm. <em>Journal of Statistical Software</em>, Accepted. <a href="https://arxiv.org/abs/2104.02444">arXiv</a></li>
+<li><p>I will be joining the Department of Statistics at Athens
+University of Economics and Business as a <strong>Marie Sklodowska-Curie
+Fellow</strong>. Looking forward to it!</p></li>
+<li><p><strong>New preprint!</strong> – Caimo, A., <strong>Bouranis,
+L.</strong>, Krause, R. and Friel, N. (2021). Statistical Network
+Analysis with Bergm. <em>Journal of Statistical Software</em>, Accepted.
+<a href="https://arxiv.org/abs/2104.02444">arXiv</a></p></li>
 </ul>
 </div>
 </div>

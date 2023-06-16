@@ -15,7 +15,7 @@ output: html_document
 </script>
 
 ## Professional Experience
-**May. 2021 -- Present** Marie Sklodowska-Curie Research Fellow,\
+**May. 2021 -- June 2023** Marie Sklodowska-Curie Research Fellow,\
 Department of Statistics, *Athens University of Economics and Business*, Greece
 
 **Mar. 2019 -- Apr. 2021** Statistician -- Data Science Consultant,\

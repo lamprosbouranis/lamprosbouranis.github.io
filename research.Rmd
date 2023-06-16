@@ -24,6 +24,16 @@ My [ResearchGate](https://www.researchgate.net/profile/Lampros_Bouranis) profile
 * Stochastic epidemiology.
 * Software implementation.
 
+## Preprints
+
+**Bouranis, L.** (2023). \
+**Bernadette: Bayesian Inference and Model Selection for Stochastic Epidemics in R** \
+[JOSS preprint](https://github.com/openjournals/joss-reviews/issues/5541)
+
+**Bouranis, L.**, Demiris, N., Kalogeropoulos, K. and Ntzoufras, I. (2022). \
+**Bayesian analysis of diffusion-driven multi-type epidemic models with application to COVID-19**. \
+[arXiv](https://arxiv.org/abs/2211.15229)
+
 ## Publications in peer-reviewed journals
 
 Caimo, A. , **Bouranis, L.**, Krause, R. and Friel, N. (2022). \

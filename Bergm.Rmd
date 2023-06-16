@@ -19,6 +19,14 @@ body {
 text-align: justify}
 </style>
 
+## The Bernadette package - Bayesian inference and model selection for stochastic epidemics
+
+**CRAN**: <https://CRAN.R-project.org/package=Bernadette>
+
+The Bernadette package for R provides a framework for Bayesian analysis of infectious disease transmission dynamics via diffusion driven multi-type epidemic models with time-varying epidemiological parameters, with a particular focus on Coronavirus Disease 2019 (COVID-19). It uses the Stan probabilistic programming language and implements the Bayesian epidemic model described in [Bouranis et al](https://arxiv.org/abs/2211.15229). For models fit using Markov chain Monte Carlo, it allows for computation of approximate leave-one-out cross-validation (LOO, LOOIC) or the Widely Applicable Information Criterion (WAIC) for model checking and comparison.
+
+The Github page for this package contains a detailed [README](https://github.com/bernadette-eu/Bernadette/blob/master/README.md) file with a description of the modeling framework and the steps involved in the workflow.
+
 ## The Bergm package - Bayesian exponential random graph models
 
 **CRAN**: <https://CRAN.R-project.org/package=Bergm>
