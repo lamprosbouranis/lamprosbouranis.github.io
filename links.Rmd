@@ -3,7 +3,7 @@ output: html_document
 ---
 
 ```{r, echo=F}
-title_var <- "Lampros Bouranis - Software"
+title_var <- "Lampros Bouranis - Links"
 ```    
 ---
 title: `r title_var`
