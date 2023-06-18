@@ -2,6 +2,13 @@
 output: html_document
 ---
 
+```{r, echo=F}
+title_var <- "Lampros Bouranis - Software"
+```    
+---
+title: `r title_var`
+---
+
 <link rel="stylesheet" href="styles.css" type="text/css">
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -15,8 +22,8 @@ output: html_document
 </script>
 
 <style>
-body {
-text-align: justify}
+.title {display: none}
+.body {text-align: justify}
 </style>
 
 ## The Bernadette package - Bayesian inference and model selection for stochastic epidemics

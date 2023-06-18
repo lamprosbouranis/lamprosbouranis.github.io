@@ -2,6 +2,13 @@
 output: html_document
 ---
 
+```{r, echo=F}
+title_var <- "Lampros Bouranis - Software"
+```    
+---
+title: `r title_var`
+---
+
 <link rel="stylesheet" href="styles.css" type="text/css">
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -13,6 +20,11 @@ output: html_document
 
   gtag('config', 'UA-51103728-2');
 </script>
+
+<style>
+.title {display: none}
+.body {text-align: justify}
+</style>
 
 ## Statistical Societies and groups
 * American Statistical Association (ASA) - [link](https://www.amstat.org)

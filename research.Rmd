@@ -2,8 +2,21 @@
 output: html_document
 ---
 
+```{r, echo=F}
+title_var <- "Lampros Bouranis - Research"
+```    
+---
+title: `r title_var`
+---
+
 <link rel="stylesheet" href="styles.css" type="text/css">
 <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
+
+<style>
+.title {
+    display: none
+  }
+</style>
 
 ## Research profiles
 

@@ -3,7 +3,7 @@ output: html_document
 ---
 
 ```{r, echo=F}
-title_var <- "Main"
+title_var <- "Lampros Bouranis - Home"
 ```    
 ---
 title: `r title_var`
@@ -14,13 +14,9 @@ title: `r title_var`
 <img src="unnamed.jpg" style="width:35%; border:5px solid; margin-right: 20px" align="center">
 
 <style>
-.title {
-    display: none
-  }
+.title {display: none}
   
-.body {
-text-align: justify
-}
+.body {text-align: justify}
 </style>
 
 Welcome to my personal website! 

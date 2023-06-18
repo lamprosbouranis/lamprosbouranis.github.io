@@ -2,6 +2,13 @@
 output: html_document
 ---
 
+```{r, echo=F}
+title_var <- "Lampros Bouranis - About"
+```    
+---
+title: `r title_var`
+---
+
 <link rel="stylesheet" href="styles.css" type="text/css">
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -13,6 +20,12 @@ output: html_document
 
   gtag('config', 'UA-51103728-2');
 </script>
+
+<style>
+.title {
+    display: none
+  }
+</style>
 
 ## Professional Experience
 
