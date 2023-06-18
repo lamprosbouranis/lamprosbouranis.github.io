@@ -5,7 +5,7 @@ navbar:
   left:
     - text: "Home"
       icon: fa-home
-      href: main.html
+      href: index.html
     - text: "Bio"
       icon: fa-user
       href: about.html
@@ -30,8 +30,4 @@ output:
 params: 
     set_title: "Lampros Bouranis"
 title: "`r params$set_title`"
-      
-      
-      
-      
       

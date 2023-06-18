@@ -15,6 +15,7 @@ output: html_document
 </script>
 
 ## Professional Experience
+
 **May. 2021 -- June 2023** Marie Sklodowska-Curie Research Fellow,\
 Department of Statistics, *Athens University of Economics and Business*, Greece
 

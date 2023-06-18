@@ -51,12 +51,14 @@ I participated in the Action "Visits of faculty members to secondary education s
 #### 2022
 
 ##### November
+
 * **New preprint!** -- **Bouranis, L.**, Demiris, N., Kalogeropoulos, K. and Ntzoufras, I. (2022). 
 \
 **Bayesian analysis of diffusion-driven multi-type epidemic models with application to COVID-19**. \
 [arXiv](https://arxiv.org/abs/2211.15229)
 
 ##### October
+
 This summer I presented my work on "Bayesian analysis of diffusion driven multi-type
 epidemic models with application to COVID-19" (joint with Nikos Demiris, Konstantinos Kalogeropoulos and Ioannis Ntzoufras) at the following conferences/meetings:
 
@@ -66,6 +68,7 @@ epidemic models with application to COVID-19" (joint with Nikos Demiris, Konstan
 * 3rd research meeting of the School of Information Sciences and Technology, Athens University of Economics and Business, Greece (June 2022).
 
 ##### September
+
 * **New publication!** -- Caimo, A. , **Bouranis, L.**, Krause, R. and Friel, N. (2022). \
 Statistical Network Analysis with Bergm. \
 *Journal of Statistical Software*, 104(1):1-23. DOI: 10.18637/jss.v104.i01
@@ -75,15 +78,19 @@ Statistical Network Analysis with Bergm. \
 #### 2021
 
 ##### October
+
 * **Talk** - The abstract and pdf of the presentation is available [here](https://www.dept.aueb.gr/en/stat/events/seminar-statistical-network-analysis-bergm). The presentation is also available on the [AUEB-Stats YouTube channel](https://www.youtube.com/c/AUEBStats).
 
 ##### July
+
 * Version 5.0.3 of the Bergm R library is available on [CRAN](https://cran.r-project.org/web/packages/Bergm/index.html). 
 
 ##### May
+
 * The [website](https://bernadette-eu.github.io/) for the BERNADETTE Marie Sklodowska-Curie Action (MSCA) is live. Feel free to bookmark this to keep an eye on the project updates. The website is accompanied by a Twitter profile: [BernadetteMsca](https://twitter.com/BernadetteMsca).
 
 ##### April
+
 * I will be joining the Department of Statistics at Athens University of Economics and Business as a **Marie Sklodowska-Curie Fellow**. Looking forward to it!
 
 * **New preprint!** -- Caimo, A., **Bouranis, L.**, Krause, R. and Friel, N. (2021).
