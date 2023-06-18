@@ -13,8 +13,8 @@
 
 <title>research.knit</title>
 
-<script src="site_libs/header-attrs-2.9/header-attrs.js"></script>
-<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<script src="site_libs/header-attrs-2.21/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
@@ -32,8 +32,8 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
-<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.4.0/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.4.0/css/v4-shims.min.css" rel="stylesheet" />
 
 <style type="text/css">
   code{white-space: pre-wrap;}
@@ -54,6 +54,7 @@ if (window.hljs) {
   }
 }
 </script>
+
 
 
 
@@ -83,6 +84,9 @@ button.code-folding-btn:focus {
 }
 summary {
   display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
 }
 pre code {
   padding: 0;
@@ -140,11 +144,15 @@ $(document).ready(function () {
     href = "index.html";
   var menuAnchor = $('a[href="' + href + '"]');
 
-  // mark it active
-  menuAnchor.tab('show');
-
-  // if it's got a parent navbar menu mark it active as well
-  menuAnchor.closest('li.dropdown').addClass('active');
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
 
   // Navbar adjustments
   var navHeight = $(".navbar").first().height() + 15;
@@ -173,8 +181,8 @@ $(document).ready(function () {
   border-radius: 4px;
 }
 
-.tabset-dropdown > .nav-tabs > li.active:before {
-  content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
   font-family: 'Glyphicons Halflings';
   display: inline-block;
   padding: 10px;
@@ -182,16 +190,9 @@ $(document).ready(function () {
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "&#xe258;";
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "";
+  content: "\e258";
   font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
+  border: none;
 }
 
 .tabset-dropdown > .nav-tabs > li.active {
@@ -235,7 +236,7 @@ $(document).ready(function () {
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -300,51 +301,104 @@ $(document).ready(function () {
 </div>
 
 
-<p><link rel="stylesheet" href="styles.css" type="text/css"> <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css"></p>
+<p><link rel="stylesheet" href="styles.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css"></p>
 <div id="research-profiles" class="section level2">
 <h2>Research profiles</h2>
-<p><i class="ai ai-google-scholar-square ai-1x"></i> My <a href="https://scholar.google.com/citations?hl=en&amp;user=Qcvw8zoAAAAJ">Google Scholar</a> profile.<br />
-<i class="ai ai-researchgate-square ai-1x"></i> My <a href="https://www.researchgate.net/profile/Lampros_Bouranis">ResearchGate</a> profile.</p>
+<p><i class="ai ai-google-scholar-square ai-1x"></i> My <a
+href="https://scholar.google.com/citations?hl=en&amp;user=Qcvw8zoAAAAJ">Google
+Scholar</a> profile.<br />
+<i class="ai ai-researchgate-square ai-1x"></i> My <a
+href="https://www.researchgate.net/profile/Lampros_Bouranis">ResearchGate</a>
+profile.</p>
 <p><strong>ORCID:</strong> 0000-0002-1291-2192</p>
 </div>
 <div id="research-interests" class="section level2">
 <h2>Research interests</h2>
 <ul>
 <li>Markov chain Monte Carlo methods and applications.</li>
-<li>Bayesian statistics – model selection; evidence/marginal likelihood estimation.</li>
+<li>Bayesian statistics – model selection; evidence/marginal likelihood
+estimation.</li>
 <li>Intractable likelihoods.</li>
-<li>Statistical network analysis: Bayesian inference for statistical network models and applications in social network analysis.</li>
-<li>Composite likelihood inference – applications to Exponential random graph models.</li>
+<li>Statistical network analysis: Bayesian inference for statistical
+network models and applications in social network analysis.</li>
+<li>Composite likelihood inference – applications to Exponential random
+graph models.</li>
 <li>Stochastic epidemiology.</li>
 <li>Software implementation.</li>
 </ul>
 </div>
+<div id="preprints" class="section level2">
+<h2>Preprints</h2>
+<p><strong>Bouranis, L.</strong> (2023).<br />
+<strong>Bernadette: Bayesian Inference and Model Selection for
+Stochastic Epidemics in R</strong><br />
+<a href="https://github.com/openjournals/joss-reviews/issues/5541">JOSS
+preprint</a></p>
+<p><strong>Bouranis, L.</strong>, Demiris, N., Kalogeropoulos, K. and
+Ntzoufras, I. (2022).<br />
+<strong>Bayesian analysis of diffusion-driven multi-type epidemic models
+with application to COVID-19</strong>.<br />
+<a href="https://arxiv.org/abs/2211.15229">arXiv</a></p>
+</div>
 <div id="publications-in-peer-reviewed-journals" class="section level2">
 <h2>Publications in peer-reviewed journals</h2>
-<p>Caimo, A. , <strong>Bouranis, L.</strong>, Krause, R. and Friel, N. (2021).<br />
+<p>Caimo, A. , <strong>Bouranis, L.</strong>, Krause, R. and Friel, N.
+(2022).<br />
 <strong>Statistical Network Analysis with Bergm</strong>.<br />
-<em>Journal of Statistical Software</em>, Accepted.   <a href="https://arxiv.org/abs/2104.02444">arXiv</a></p>
-<p>Bouranis, D., Gasparatos, D., Zechmann, B., <strong>Bouranis, L.</strong> and Chorianopoulou S. (2018).<br />
-<strong>The effect of granular commercial fertilizers containing elemental sulfur on wheat yield under Mediterranean conditions</strong>,<br />
-<em>Plants</em>, 8(1):2. DOI: 10.3390/plants8010002. <a href="https://www.ncbi.nlm.nih.gov/pubmed/30577492">Link</a></p>
+<em>Journal of Statistical Software</em>, 104(1):1-23. DOI:
+10.18637/jss.v104.i01 <a
+href="https://www.jstatsoft.org/article/view/v104i01">Link</a> | <a
+href="https://arxiv.org/abs/2104.02444">arXiv</a></p>
+<p>Bouranis, D., Gasparatos, D., Zechmann, B., <strong>Bouranis,
+L.</strong> and Chorianopoulou S. (2018).<br />
+<strong>The effect of granular commercial fertilizers containing
+elemental sulfur on wheat yield under Mediterranean
+conditions</strong>,<br />
+<em>Plants</em>, 8(1):2. DOI: 10.3390/plants8010002. <a
+href="https://www.ncbi.nlm.nih.gov/pubmed/30577492">Link</a></p>
 <p><strong>Bouranis, L.</strong>, Friel, N., and Maire, F. (2018).<br />
-<strong>Model comparison for Gibbs random fields using noisy reversible jump Markov chain Monte Carlo</strong>.<br />
-<em>Computational Statistics and Data Analysis</em>, 128:221-241. DOI: 10.1016/j.csda.2018.07.005. <a href="https://www.sciencedirect.com/science/article/pii/S0167947318301713">Link</a> | <a href="https://arxiv.org/abs/1712.05358">arXiv</a></p>
+<strong>Model comparison for Gibbs random fields using noisy reversible
+jump Markov chain Monte Carlo</strong>.<br />
+<em>Computational Statistics and Data Analysis</em>, 128:221-241. DOI:
+10.1016/j.csda.2018.07.005. <a
+href="https://www.sciencedirect.com/science/article/pii/S0167947318301713">Link</a>
+| <a href="https://arxiv.org/abs/1712.05358">arXiv</a></p>
 <p><strong>Bouranis, L.</strong>, Friel, N., and Maire, F. (2018).<br />
-<strong>Bayesian model selection for exponential random graph models via adjusted pseudolikelihoods</strong>.<br />
-<em>Journal of Computational and Graphical Statistics</em>, 27(3):516-528. DOI: 10.1080/10618600.2018.1448832. <a href="https://www.tandfonline.com/doi/abs/10.1080/10618600.2018.1448832?journalCode=ucgs20">Link</a> | <a href="https://arxiv.org/abs/1706.06344">arXiv</a></p>
+<strong>Bayesian model selection for exponential random graph models via
+adjusted pseudolikelihoods</strong>.<br />
+<em>Journal of Computational and Graphical Statistics</em>,
+27(3):516-528. DOI: 10.1080/10618600.2018.1448832. <a
+href="https://www.tandfonline.com/doi/abs/10.1080/10618600.2018.1448832?journalCode=ucgs20">Link</a>
+| <a href="https://arxiv.org/abs/1706.06344">arXiv</a></p>
 <p><strong>Bouranis, L.</strong>, Friel, N., and Maire, F. (2017).<br />
-<strong>Efficient Bayesian inference for exponential random graph models by correcting the pseudo-posterior distribution</strong>.<br />
-<em>Social Networks</em>, 50:98-108. DOI: 10.1016/j.socnet.2017.03.013. <a href="https://www.sciencedirect.com/science/article/pii/S0378873315301489">Link</a> | <a href="https://arxiv.org/abs/1510.00934">arXiv</a></p>
-<p>Bouranis D., Chorianopoulou S., <strong>Bouranis, L.</strong> (2014).<br />
-<strong>Modelling the trends of nutrient concentration dynamics in S-deprived young maize plants</strong>.<br />
-<em>Journal of Plant Nutrition</em>, 37(13):2128-2143. DOI: 10.1080/01904167.2014.920372. <a href="https://www.tandfonline.com/doi/abs/10.1080/01904167.2014.920372">Link</a></p>
-<p>Bouranis D., Chorianopoulou S., <strong>Bouranis, L.</strong> (2014).<br />
-<strong>A power function based approach for the assessment of the sulfate deprivation impact on nutrient allocation in young maize plants</strong>.<br />
-<em>Journal of Plant Nutrition</em>, 37(5):704-722. DOI: 10.1080/01904167.2013.873455. <a href="https://www.tandfonline.com/doi/abs/10.1080/01904167.2013.873455">Link</a></p>
-<p><strong>Bouranis, L.</strong>, Sperrin M., Greystoke A., Dive C., Renehan AG. (2013).<br />
-<strong>The interaction between prognostic and pharmacodynamic biomarkers</strong>.<br />
-<em>Br J Cancer</em>, 109(7):1782-1785. DOI: 10.1038/bjc.2013.527. <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3790178/">Link</a></p>
+<strong>Efficient Bayesian inference for exponential random graph models
+by correcting the pseudo-posterior distribution</strong>.<br />
+<em>Social Networks</em>, 50:98-108. DOI: 10.1016/j.socnet.2017.03.013.
+<a
+href="https://www.sciencedirect.com/science/article/pii/S0378873315301489">Link</a>
+| <a href="https://arxiv.org/abs/1510.00934">arXiv</a></p>
+<p>Bouranis D., Chorianopoulou S., <strong>Bouranis, L.</strong>
+(2014).<br />
+<strong>Modelling the trends of nutrient concentration dynamics in
+S-deprived young maize plants</strong>.<br />
+<em>Journal of Plant Nutrition</em>, 37(13):2128-2143. DOI:
+10.1080/01904167.2014.920372. <a
+href="https://www.tandfonline.com/doi/abs/10.1080/01904167.2014.920372">Link</a></p>
+<p>Bouranis D., Chorianopoulou S., <strong>Bouranis, L.</strong>
+(2014).<br />
+<strong>A power function based approach for the assessment of the
+sulfate deprivation impact on nutrient allocation in young maize
+plants</strong>.<br />
+<em>Journal of Plant Nutrition</em>, 37(5):704-722. DOI:
+10.1080/01904167.2013.873455. <a
+href="https://www.tandfonline.com/doi/abs/10.1080/01904167.2013.873455">Link</a></p>
+<p><strong>Bouranis, L.</strong>, Sperrin M., Greystoke A., Dive C.,
+Renehan AG. (2013).<br />
+<strong>The interaction between prognostic and pharmacodynamic
+biomarkers</strong>.<br />
+<em>Br J Cancer</em>, 109(7):1782-1785. DOI: 10.1038/bjc.2013.527. <a
+href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3790178/">Link</a></p>
 </div>
 
 
