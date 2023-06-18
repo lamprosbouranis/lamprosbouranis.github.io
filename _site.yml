@@ -5,14 +5,14 @@ navbar:
   left:
     - text: "Home"
       icon: fa-home
-      href: index.html
+      href: main.html
     - text: "Bio"
       icon: fa-user
       href: about.html
     - text: "Research"
       href: research.html
     - text: "Software"
-      href: Bergm.html
+      href: software.html
     - text: "Links"
       href: links.html
   right:
