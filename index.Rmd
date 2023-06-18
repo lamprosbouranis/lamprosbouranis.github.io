@@ -2,12 +2,23 @@
 output: html_document
 ---
 
+```{r, echo=F}
+title_var <- "Main"
+```    
+---
+title: `r title_var`
+---
+
 <link rel="stylesheet" href="styles.css" type="text/css">
 
 <img src="unnamed.jpg" style="width:35%; border:5px solid; margin-right: 20px" align="center">
 
 <style>
-body {
+.title {
+    display: none
+  }
+  
+.body {
 text-align: justify
 }
 </style>
