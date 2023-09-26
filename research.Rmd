@@ -39,15 +39,16 @@ My [ResearchGate](https://www.researchgate.net/profile/Lampros_Bouranis) profile
 
 ## Preprints
 
-**Bouranis, L.** (2023). \
-**Bernadette: Bayesian Inference and Model Selection for Stochastic Epidemics in R** \
-[JOSS preprint](https://github.com/openjournals/joss-reviews/issues/5541)
-
 **Bouranis, L.**, Demiris, N., Kalogeropoulos, K. and Ntzoufras, I. (2022). \
 **Bayesian analysis of diffusion-driven multi-type epidemic models with application to COVID-19**. \
 [arXiv](https://arxiv.org/abs/2211.15229)
 
 ## Publications in peer-reviewed journals
+
+**Bouranis, L.** (2023). \
+**Bernadette: Bayesian Inference and Model Selection for Stochastic Epidemics in R**. \
+*Journal of Open Source Software*, 8(89): 5612. DOI: 10.21105/joss.05612
+[Link](https://joss.theoj.org/papers/10.21105/joss.05612)
 
 Caimo, A. , **Bouranis, L.**, Krause, R. and Friel, N. (2022). \
 **Statistical Network Analysis with Bergm**. \
@@ -56,7 +57,7 @@ Caimo, A. , **Bouranis, L.**, Krause, R. and Friel, N. (2022). \
 [arXiv](https://arxiv.org/abs/2104.02444)
 
 Bouranis, D., Gasparatos, D., Zechmann, B., **Bouranis, L.** and Chorianopoulou S. (2018). \
-**The effect of granular commercial fertilizers containing elemental sulfur on wheat yield under Mediterranean conditions**,\
+**The effect of granular commercial fertilizers containing elemental sulfur on wheat yield under Mediterranean conditions**.\
 *Plants*, 8(1):2. DOI: 10.3390/plants8010002. [Link](https://www.ncbi.nlm.nih.gov/pubmed/30577492)
 
 **Bouranis, L.**, Friel, N., and Maire, F. (2018).\
