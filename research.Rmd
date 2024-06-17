@@ -31,7 +31,9 @@ My [ResearchGate](https://www.researchgate.net/profile/Lampros_Bouranis) profile
 
 * Markov chain Monte Carlo methods and applications.
 * Bayesian statistics -- model selection; evidence/marginal likelihood estimation.
+* Evidence synthesis.
 * Intractable likelihoods.
+* Network meta-analysis.
 * Statistical network analysis: Bayesian inference for statistical network models and applications in social network analysis.
 * Composite likelihood inference -- applications to Exponential random graph models.
 * Stochastic epidemiology.

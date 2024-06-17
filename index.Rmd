@@ -21,15 +21,20 @@ title: `r title_var`
 
 Welcome to my personal website! 
 
-I am currently a Marie Sklodowska-Curie Research Fellow at the [Department of Statistics](https://www.dept.aueb.gr/en/stat), Athens University of Economics and Business. My research focuses on Bayesian inference and model selection for stochastic epidemics under the supervision of [Prof. Nikos Demiris](http://www2.aueb.gr/users/nikos/) and [Prof. Ioannis Ntzoufras](https://www.aueb.gr/en/faculty_page/ntzoufras-ioannis/).
+I worked as a Consultant-Statistician at IQVIA EMEA Real World Methods \& Evidence Generation. 
+Previously I held the position of Marie Sklodowska-Curie Research Fellow at the [Department of Statistics](https://www.dept.aueb.gr/en/stat), Athens University of Economics and Business. My research focused on Bayesian inference and model selection for stochastic epidemics under the supervision of [Prof. Nikos Demiris](http://www2.aueb.gr/users/nikos/) and [Prof. Ioannis Ntzoufras](https://www.aueb.gr/en/faculty_page/ntzoufras-ioannis/).
 
 I obtained my PhD in Statistics at [University College Dublin](http://www.ucd.ie/) under the supervision of [Prof. Nial Friel](https://maths.ucd.ie/~nial/) and the mentoring of [Dr. Florian Maire](https://maths.ucd.ie/~fmaire/). My research project was funded by the [Insight Centre for Data Analytics](http://www.insight-centre.org/) and the main focus lied on the Bayesian analysis of intractable likelihoods with applications to Gibbs random fields.
 
-My full CV is available [here](Bouranis_CV.pdf) [last update: 26/9/2023].
+My full CV is available [here](Bouranis_CV.pdf) [last update: 17/6/2024].
 
 ### News and upcoming events
 
 #### 2023
+
+##### October
+
+* I joined the IQVIA EMEA Real World Methods \& Evidence Generation team as a Consultant-Statistician.
 
 ##### September
 
