@@ -29,7 +29,7 @@ title: `r title_var`
 
 ## Professional Experience
 
-**Oct. 20231 -- June 2024** Consultant-Statistician, \
+**Oct. 2023 -- June 2024** Consultant-Statistician, \
 *IQVIA Greece*, Athens
 
 **May. 2021 -- June 2023** Marie Sklodowska-Curie Research Fellow,\
