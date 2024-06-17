@@ -29,11 +29,14 @@ title: `r title_var`
 
 ## Professional Experience
 
+**Oct. 20231 -- June 2024** Consultant-Statistician, \
+*IQVIA Greece*, Athens
+
 **May. 2021 -- June 2023** Marie Sklodowska-Curie Research Fellow,\
 Department of Statistics, *Athens University of Economics and Business*, Greece
 
 **Mar. 2019 -- Apr. 2021** Statistician -- Data Science Consultant,\
-Accenture Greece, Athens
+*Accenture Greece*, Athens
 
 **Jan. 2014 -- Jan. 2018** PhD Researcher in Statistics,\
 School of Mathematics and Statistics, *University College Dublin*, Ireland
